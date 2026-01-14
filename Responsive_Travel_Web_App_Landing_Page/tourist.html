@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARABIAN LUXE JOURNEYS</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+</head>
+
+<body>
+    <!-- <nav id="main-nav">
+        <div class="logo">ARABIAN LUXE JOURNEYS</div>
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" class="menu-icon">
+            &#9776; </label>
+        <ul class="navul" id="menu-list">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#tours">Featured Tours</a></li>
+            <li><a href="#about">The Experience</a></li>
+            <li><a href="#contact">Book Now</a></li>
+        </ul>
+    </nav> -->
+    <header class="navbar">
+        <div class="logo">ARABIAN LUXE JOURNEYS</div>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <label for="menu-toggle" class="menu-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#tours">Featured Tours</a></li>
+                <li><a href="#about">The Experience</a></li>
+                <li><a href="#contact">Book Now</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <!--Hero-->
+    <section id="Home" class="hero-section">
+        <h style="font-size: 40px; font-weight: bold;">Discover the Splendor of the Emirates</h>
+        <p style="font-size: 20px;">From the world's tallest towers in Dubai to the cultural heart of Abu Dhabi, your
+            luxury Arabian adventure
+            starts here.</p>
+        <a href="#tours" class="cta-button">Explore UAE Packages</a>
+    </section>
+    <!--Destinations-->
+    <section id="tours" class="tours-section">
+        <h2>✨ Iconic UAE Packages</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="./Images/Dubai.jpg" alt="Dubai">
+                <div class="card-content">
+                    <h3>Dubai City of Light</h3>
+                    <p>Experience the ultimate in modern luxury, from the Burj Khalifa to Palm Jumeirah and exclusive
+                        desert safaris.</p>
+                    <a href="#contact" class="package-link">View Dubai Tours</a>
+                </div>
+            </div>
+            <div class="card">
+                    <img src="./Images/Sharjah.jpg" alt="Sharjah">
+                    <div class="card-content">
+                        <h3>Sharjah Heritage Tour</h3>
+                        <p>The cultural capital of the UAE, offering historic architecture, rich museums, and family-friendly lagoons.</p>
+                        <a href="#contact" class="package-link">View Sharjah Tours</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./Images/RAK.jpg" alt="RAK">
+                    <div class="card-content">
+                        <h3>RAK Mountain Escape</h3>
+                        <p>Explore the rugged beauty of Jebel Jais, enjoy the world's longest zipline, and relax on the pristine beaches.</p>
+                        <a href="#contact" class="package-link">View RAK Adventure</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./Images/Fujairah.jpg" alt="Fujairah">
+                    <div class="card-content">
+                        <h3>Fujairah Coastal Retreat</h3>
+                        <p>Discover the East Coast, offering fantastic snorkeling, diving, and the historic Ottoman-era Al Badiyah Mosque.</p>
+                        <a href="#contact" class="package-link">View Fujairah Tours</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./Images/Ajman.jpg" alt="Ajman">
+                    <div class="card-content">
+                        <h3>Ajman Coastal Charm</h3>
+                        <p>A tranquil escape known for its stunning white-sand beaches, traditional dhow building yard, and historic fort.</p>
+                        <a href="#contact" class="package-link">View Ajman Tours</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./Images/UAQ.jpg" alt="Umm Al Quwain">
+                    <div class="card-content">
+                        <h3>UAQ Lagoon & Heritage</h3>
+                        <p>Perfect for watersports and wildlife viewing in the mangrove lagoons, plus exploring the Old Town and fishing harbor.</p>
+                        <a href="#contact" class="package-link">View UAQ Tours</a>
+                    </div>
+                </div>
+
+            <div class="card">
+                <img src="./Images/AbuDhabi.jpg" alt="Abu habi">
+                <div class="card-content">
+                    <h3>Abu Dhabi Cultural Pulse</h3>
+                    <p>Marvel at the Sheikh Zayed Grand Mosque, Louvre Abu Dhabi, and the thrills of Yas Island's
+                        premier attractions.</p>
+                    <a href="#contact" class="package-link">View Abu Dhabi Tours</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Premium Service Standard-->
+     <section id="about" class="about-section">
+            <h2>🌌 The Premium Service Standard</h2>
+            <div class="feature-list">
+                <div class="feature-item">VIP Meet & Greet</div>
+                <div class="feature-item">Certified Local Experts</div>
+                <div class="feature-item">Guaranteed Luxury Accommodations</div>
+                <div class="feature-item">24/7 Concierge Support</div>
+            </div>
+        </section>
+    <!--Contact form-->
+    <section id="contact" class="contact-section">
+        <h2 style="align-content: center;">📞 Plan Your Unforgettable UAE Journey</h2>
+        <form action="#" method="POST">
+            <input type="text" placeholder="Your Full Name" required>
+            <input type="email" placeholder="Your Email Address" required>
+            <select required>
+                <option value="" disabled selected>Select Area of Interest</option>
+                <option value="dubai">Dubai (Modern & Luxury)</option>
+                <option value="abudhabi">Abu Dhabi (Culture & Theme Parks)</option>
+                <option value="rak">Ras Al Khaimah (Adventure & Nature)</option>
+                <option value="all">All Emirates</option>
+            </select>
+            <button type="submit">Request Custom Trip Proposal</button>
+        </form>
+    </section>
+    <footer>
+         <p>Arabian Luxe Journeys | &copy; 2025 All rights reserved. | Experience the Emirates.</p>
+    </footer>
+</body>
+
+</html>

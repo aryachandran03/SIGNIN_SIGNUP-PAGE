@@ -1,0 +1,119 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #0b0f2b, #3b1d6f, #6a2fd1);
+    min-height: 100vh;
+    color: #fff;
+}
+
+.todo-card {
+    max-width: 420px;
+    width: 100%;
+    background: rgba(20, 16, 60, 0.95);
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.app-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.app-title span {
+    color: #a78bfa;
+}
+
+.form-control {
+    background: #2a1f5c;
+    border: none;
+    border-radius: 18px;
+    color: #fff;
+    padding: 12px;
+}
+
+.form-control::placeholder {
+    color: #b7a7e6;
+}
+
+.btn-add {
+    border-radius: 18px;
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 18px;
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+}
+
+.list-group-item {
+    background: linear-gradient(135deg, #5b2ccf, #8b5cf6);
+    border: none;
+    border-radius: 22px;
+    margin-bottom: 14px;
+    color: #fff;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+
+.list-group-item:hover {
+    transform: translateY(-3px);
+}
+
+.task-text {
+    font-weight: 400;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.btn-action {
+    border-radius: 12px;
+    border: none;
+    padding: 6px 10px;
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+.btn-toggle {
+    background: #22c55e;
+    color: #0f172a;
+}
+
+.btn-edit {
+    background: #facc15;
+    color: #1f2933;
+}
+
+.btn-delete {
+    background: #ef4444;
+    color: #fff;
+}
+
+.error-text {
+    font-size: 13px;
+    color: #f9a8d4;
+    margin-top: 6px;
+    display: none;
+}
+
+.input-error {
+    box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.7) !important;
+}
+
+.edit-error {
+    box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.7);
+}
+
+.edit-error-text {
+    font-size: 12px;
+    color: #f9a8d4;
+    margin-top: 4px;
+}

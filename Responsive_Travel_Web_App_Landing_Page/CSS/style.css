@@ -1,0 +1,406 @@
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #cccccc;
+            background-color: #121212;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            padding: 5rem 5%;
+        }
+
+        h1, h2 {
+            margin-bottom: 1em;
+            color: #bb86fc;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #bb86fc;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background-color: #000000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #bb86fc;
+        }
+
+        .navbar nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        .navbar nav a {
+            color: #cccccc;
+            padding: 0.5rem;
+            transition: color 0.3s;
+            font-weight: 400;
+        }
+
+        .navbar nav a:hover {
+            color: #bb86fc;
+        }
+        
+        /* --- HAMBURGER MENU --- */
+        
+        .menu-toggle {
+            display: none;
+        }
+        
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+        
+        .menu-icon .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 4px 0;
+            transition: 0.4s;
+            border-radius: 5px;
+        }
+        
+        /* Mobile View */
+        @media (max-width: 768px) {
+            
+            .navbar {
+                justify-content: space-between;
+                padding: 1rem 5%;
+            }
+            
+            .menu-icon {
+                display: flex;
+            }
+
+            .navbar nav {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #000000;
+                box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+                display: none;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+
+            .navbar nav ul {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px 0;
+            }
+
+            .navbar nav ul li {
+                border-bottom: 1px solid #1f1f1f;
+            }
+            
+            .navbar nav ul li:last-child {
+                border-bottom: none;
+            }
+            
+            .navbar nav a {
+                display: block;
+                padding: 15px;
+                width: 100%;
+                font-size: 1.1rem;
+            }
+            
+            .menu-toggle:checked ~ nav {
+                display: flex;
+                opacity: 1;
+            }
+            
+            .menu-toggle:checked ~ .menu-icon .bar:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+            
+            .menu-toggle:checked ~ .menu-icon .bar:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .menu-toggle:checked ~ .menu-icon .bar:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: url("../Images/UAE.jpg") no-repeat center center/cover;
+            height: 90vh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        
+
+        /* Dark overlay for better text readability */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-section * { 
+            z-index: 1;
+        }
+
+        .hero-section h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 0.5rem;
+            color: #fff;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-section p {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: #bb86fc;
+            color: #121212;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: background-color 0.3s, transform 0.2s;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(187, 134, 252, 0.5);
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            background-color: #9e73d3;
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(158, 115, 211, 0.7);
+        }
+
+        /* Featured Tours Section */
+        .tours-section {
+            background-color: #121212;
+            text-align: center;
+        }
+        
+        .tours-section h2 {
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+
+        .card-container {
+            display: flex; 
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap; 
+        }
+
+        .card {
+            background-color: #1f1f1f;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            width: 350px;
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(187, 134, 252, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px 25px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 1.6rem;
+            color: #fff;
+            text-align: left;
+        }
+        
+        .card p {
+            font-size: 1rem;
+            color: #b0b0b0;
+            margin-bottom: 15px;
+        }
+        
+        .card .package-link {
+            display: inline-block;
+            color: #bb86fc;
+            font-weight: 700;
+            border-bottom: 2px solid #bb86fc;
+            padding-bottom: 2px;
+        }
+        
+        .card .package-link:hover {
+            color: #9e73d3;
+            border-bottom-color: #9e73d3;
+        }
+
+
+        /* 5. About Us Section (Features) */
+        .about-section {
+            background-color: #1f1f1f;
+            text-align: center;
+        }
+
+        .feature-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            gap: 30px;
+        }
+
+        .feature-item {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #bb86fc;
+            padding: 20px 25px;
+            border-bottom: 4px solid #bb86fc;
+            background-color: #2e2e2e;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            flex-basis: 280px; 
+            text-align: center;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #000000;
+            color: #fff;
+            align-items: center;
+        }
+
+        .contact-section h2 {
+            color: #fff;
+        }
+
+        .contact-section h5 {
+            color: #fff;
+        }
+        .contact-section p {
+            color: #cccccc;
+        }
+
+        .contact-section form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact-section input, .contact-section select {
+            width: 100%;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background-color: #1f1f1f;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .contact-section input::placeholder {
+            color: #999;
+        }
+        
+        .contact-section button[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            background-color: #bb86fc;
+            color: #121212;
+            cursor: pointer;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+            text-transform: uppercase;
+        }
+
+        .contact-section button[type="submit"]:hover {
+            background-color: #9e73d3;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000000;
+            color: #666;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            border-top: 1px solid #1f1f1f;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 70vh;
+                padding: 3rem 1rem;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+            
+            .card {
+                width: 100%;
+                max-width: 450px;
+            }
+            
+            .feature-item {
+                flex-basis: 100%;
+            }
+        }

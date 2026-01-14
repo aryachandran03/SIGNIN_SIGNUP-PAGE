@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Phonebook App</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button id="loginTab" class="active">Sign In</button>
+            <button id="registerTab">Sign Up</button>
+        </div>
+
+        <!-- SIGN IN -->
+        <form id="signinForm" class="active">
+            <h2>Welcome Back</h2>
+            <input type="email" id="signinEmail" placeholder="Email" required>
+            <div class="password-box">
+                <input type="password" id="signinPassword" placeholder="Password" required>
+                <span class="toggle" onclick="togglePassword('signinPassword')">👁</span>
+            </div>
+            <button class="submit">Sign In</button>
+        </form>
+
+        <!-- SIGN UP -->
+        <form id="signupForm">
+            <h2>Create Account</h2>
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <input type="text" id="city" placeholder="City" required>
+            <div class="password-box">
+                <input type="password" id="password" placeholder="Password" required>
+                <span class="toggle" onclick="togglePassword('password')">👁</span>
+            </div>
+            <div class="password-box">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <span class="toggle" onclick="togglePassword('confirmPassword')">👁</span>
+            </div>
+            <button class="submit">Register</button>
+        </form>
+    </div>
+    <script src="./JS/index.js"></script>
+</body>
+
+</html>
